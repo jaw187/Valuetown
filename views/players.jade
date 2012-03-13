@@ -1,0 +1,29 @@
+.span3
+  include toolbar
+.span9
+  table.table.table-striped
+    thead
+      tr
+        th Rank
+        th Name
+        th Team
+        th 
+          a(href="/sortby/adp") ADP
+        th
+          a(href="/sortby/high") High
+        th
+          a(href="/sortby/low") Low
+        th
+          a(href="/sortby/pct") PCT
+    tbody
+    -var rank = 1
+    -each player, i in players
+      tr
+        td=rank
+        td=player.fullname
+        td=player.pro_team
+        td=player.draft.adp
+        td=player.draft.high
+        td=player.draft.low
+        td=player.draft.pct
+        -rank++

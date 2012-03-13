@@ -1,0 +1,23 @@
+.well.sidebar-nav
+  ul.nav.nav-list
+    li.nav-header Sort By
+    li
+      a(href="/sortby/adp") ADP
+    li
+      a(href="/sortby/high") Highest
+    li
+      a(href="/sortby/low") Lowest
+    li
+      a(href="sortby/pct") PCT
+    //
+      li.nav-header League
+      li 
+        a(href="/list/players/AL") AL
+      li
+        a(href="/list/players/NL") NL
+      li.nav-header Position
+      li
+        a(href="/list/players") All
+      -each position, i in positions
+        li
+          a(href="/list/players/#position{abbr}")=position.abbr
