@@ -9,15 +9,14 @@
       a(href="/sortby/low") Lowest
     li
       a(href="sortby/pct") PCT
-    //
-      li.nav-header League
-      li 
-        a(href="/list/players/AL") AL
+    li.nav-header League
+    li
+      a(href="/list/players/AL") AL
+    li
+      a(href="/list/players/NL") NL
+    li.nav-header Position
+    li
+      a(href="/list/players") All
+    -each position, i in positions
       li
-        a(href="/list/players/NL") NL
-      li.nav-header Position
-      li
-        a(href="/list/players") All
-      -each position, i in positions
-        li
-          a(href="/list/players/#position{abbr}")=position.abbr
+        a(href="/list/players/#{position.abbr}")=position.abbr
